@@ -13,13 +13,13 @@
     "web-vitals": "^2.1.3"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint:js": "eslint src/**/*.{js,jsx}",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "prepare": "husky install"
   },
   "eslintConfig": {
@@ -41,16 +41,13 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^8.14.0",
-    "husky": "^7.0.4",
+    "eslint": "^8.15.0",
+    "husky": "^8.0.1",
     "lint-staged": "^12.4.1",
-    "prettier": "^2.6.2",
-    "prop-types": "^15.8.1"
+    "prettier": "^2.6.2"
   },
   "lint-staged": {
-    "*.js,jsx": "eslint --cache --fix",
-    "*.{js,jsx,css,md,scss}": "prettier --write",
-    "*.js": "eslint --cache --fix",
-    "*.{js,css,md}": "prettier --write"
+    "*.{js,jsx}": "eslint --cache --fix",
+    "*.{js,jsx,css,md,scss}": "prettier --write"
   }
 }
