@@ -1,0 +1,21 @@
+.statistics {
+}
+
+.title {
+}
+
+.stat_list {
+  list-style: none;
+  display: flex;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+}
+
+.percentage {
+}
