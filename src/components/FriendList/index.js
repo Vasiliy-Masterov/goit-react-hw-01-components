@@ -1,0 +1,1 @@
+export { FriendList } from './Friend-list.jsx';
