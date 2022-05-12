@@ -41,16 +41,14 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^8.14.0",
+    "eslint": "^8.15.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.4.1",
     "prettier": "^2.6.2",
     "prop-types": "^15.8.1"
   },
   "lint-staged": {
-    "*.js,jsx": "eslint --cache --fix",
-    "*.{js,jsx,css,md,scss}": "prettier --write",
-    "*.js": "eslint --cache --fix",
-    "*.{js,css,md}": "prettier --write"
+    "*.{js,jsx}": "eslint --cache --fix",
+    "*.{js,jsx,css,md,scss}": "prettier --write"
   }
 }
