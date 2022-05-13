@@ -1,20 +1,29 @@
 //import PropTypes from 'prop-types';
 import stats from './data.json';
-import style from './Statistics.module.css';
+import styles from './Statistics.module.css';
 
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
+
+//function colorChange() {
+    //const randomHexColor = getRandomHexColor();
+    //bodyEl.style.backgroundColor = randomHexColor;   
+//}   
+  
 const title = "Upload stats";
 
 export const Statistics = () => {
   
   return (
-    <section className={style.statistics}>
-      {title.length > 0 ? < h2 className={style.title}>{title}</h2> : null}
-      <ul className={style.stat_list}>
+    <section className={styles.statistics} >
+      {title.length > 0 ? < h2 className={styles.title}>{title}</h2> : null}
+      <ul className={styles.stat_list}>
         {stats.map(item => (
-            <li key={item.id} className={style.item}>
-              <span className={style.label}>{item.label}</span>
-              <span className={style.percentage}>{item.percentage}</span>
-            </li>
+          <li key={item.id} className={styles.item} style={{ backgroundColor: `${getRandomHexColor()}` }}>
+            <span className={styles.label}>{item.label}</span>
+            <span className={styles.percentage}>{item.percentage}</span>
+          </li>
             )
           )
         }
