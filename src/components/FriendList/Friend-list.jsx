@@ -7,8 +7,7 @@ export const FriendList = () => {
     return (
     <ul className={styles.friend_list}>
         {friends.map(item => (<li key={item.id} className={styles.item}>
-            {item.isOnline ? <span className={styles.status} style={{ backgroundColor: "green" }}></span> :
-            <span className={styles.status} style={{ backgroundColor:"red"}}></span>}
+            <span className={styles.status} style={{ backgroundColor: `${item.isOnline ? "green" : "red"}` }}></span>                
             <img className={styles.avatar} src={item.avatar} alt="User avatar" width="48" />
             <p className={styles.name}>{item.name}</p>
         </li>))}
