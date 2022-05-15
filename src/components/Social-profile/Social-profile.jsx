@@ -32,13 +32,15 @@ export const Profile = () => {
 };
 
 Profile.propTypes = {
-  avatar: PropTypes.string,
-  username: PropTypes.string.isRequired,
-  tag: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  state: PropTypes.shape({
-    followers: PropTypes.number.isRequired,
-    view: PropTypes.number.isRequired,
-    likes: PropTypes.number.isRequired,
+  user: PropTypes.objectOf({
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    avatar: PropTypes.string,
+    state: PropTypes.shape({
+      followers: PropTypes.number.isRequired,
+      view: PropTypes.number.isRequired,
+      likes: PropTypes.number.isRequired,
+    }),
   }),
-}
+};

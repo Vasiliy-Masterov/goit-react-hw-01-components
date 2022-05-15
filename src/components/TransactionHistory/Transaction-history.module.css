@@ -1,18 +1,17 @@
 .transaction_history {
   width: 500px;
   text-align: center;
+  margin-bottom: 30px;
 }
+
 .head {
   text-transform: uppercase;
   font-style: 16px;
   background-color: rgb(84, 199, 197);
   color: #fff;
 }
-.head_row {
-}
-.head_type,
-.head_amount,
-.head_currency {
+
+.head_item {
   font-weight: 400;
   padding: 10px;
 }
@@ -20,17 +19,18 @@
 .item {
   font-style: 14px;
   padding: 10px;
+}
+
+.item:nth-child(2n) {
   background-color: rgb(228, 222, 222);
 }
+
 .type,
 .amount,
 .currency {
   padding: 10px;
 }
+
 .type::first-letter {
   text-transform: uppercase;
-}
-.amount {
-}
-.currency {
 }

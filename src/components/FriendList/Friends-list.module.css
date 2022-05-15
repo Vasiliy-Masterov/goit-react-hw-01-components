@@ -1,16 +1,20 @@
 .friend_list {
   width: 300px;
   list-style: none;
-  margin-bottom: 20px;
+  margin: 0 0 30px 0;
   padding: 0;
 }
 .item {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
   padding: 10px;
   box-shadow: 0px 0px 5px -1px rgba(54, 103, 105, 0.7);
 }
+
+.item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 .status {
   display: block;
   width: 10px;
